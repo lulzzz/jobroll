@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+require 'daemons'
+require 'yaml'
+
+config = File.join(File.dirname(__FILE__), *%w[.. .. config daemons.yml])
+script =File.join(File.dirname(__FILE__), *%w[script.rb])
+
+options = YAML.load_file config
+options['dir_mode'] = options['dir_mode'].to_sym
+
+Daemons.run script, options

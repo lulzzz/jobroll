@@ -1,0 +1,21 @@
+default: &default
+  host: weatherstation
+  adapter: postgresql
+  encoding: unicode
+  database: jobroll_development
+  pool: 5
+  username: kitchen
+  password: qwdghf23qw
+
+development:
+  <<: *default
+  database: jobroll_development
+
+test:
+  <<: *default
+  database: jobroll_test
+
+production:
+  <<: *default
+  database: jobroll_production
+

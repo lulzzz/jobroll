@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Uid:</strong>
+  <%= @tag.uid %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @tag.size %>
+</p>
+
+<p>
+  <strong>Dump:</strong>
+  <%= @tag.dump %>
+</p>
+
+<%= link_to 'Edit', edit_tag_path(@tag) %> |
+<%= link_to 'Back', tags_path %>
